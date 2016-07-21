@@ -1,20 +1,32 @@
 console.log(Team JEZ Translator)
 
 
-var translator = (function(translator) {
-  var spanish = {
-    merry: "feliz",
-    christmas: "navidad",
-    and: "y",
-    happy: "prospero",
-    new: "nuevo",
-    year: "ano"
+var userText = document.getElementById('userInput').value
+document.getElementById("translateButton").addEventListener("onClick");
+
+function translator (userText) {
+  var var spanish = {
+      merry: "feliz",
+      christmas: "navidad",
+      and: "y",
+      happy: "prospero",
+      new: "nuevo",
+      year: "ano"
+      }
+  var sentence = [];
+  var userText = "";
+  var newArray = userText.split(" ");
+  for (var i = 0; i < newArray.length; i++) {
+    for (var trans in spanish) {
+      if (newArray[i] === trans) {
+        sentence.push(spanish[trans])
+        }
     }
-
-  translator.toSpanish = function() {
-      return spanish;
   }
+console.log(sentence.join(' '));
+}
 
-  return translator;
+translator(userText)
 
-})(translator);
+
+
