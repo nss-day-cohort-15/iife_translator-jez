@@ -1,26 +1,16 @@
-var Sedan = (function() {
-  var color = "blue";
-  var type = "sedan";
 
-  return {
-    manufacture_date: new Date(),
-    getColor: function() {
-      return color;
-    },
-    setColor: function(newColor) {
-      color = newColor;
-    },
-    getType: function() {
-      return type;
-    }
-  };
-})();
-
-
-
-
-
-
-var translations: {
-
+function translator (userText) {
+var lexicon = { hello: 'bonjour', merry: 'joyeux', christmas:'Noël'};
+var sentence = [];
+var userText = "hello merry christmas";
+var newArray = userText.split(" ");
+for (var i = 0; i < newArray.length; i++) {
+  for (var trans in lexicon) {
+    if (newArray[i] === trans) {
+      sentence.push(lexicon[trans])
+      }
+  }
 }
+console.log(sentence.join(' '));
+}
+translator(userText);
