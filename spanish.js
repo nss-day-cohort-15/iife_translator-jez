@@ -1,11 +1,15 @@
 console.log(Team JEZ Translator)
 
-var  = (function() {
-  var color = "blue";
-  var type = "sedan";
+var spanish = {yes:si, no:noo, maybe:alomejor};
+
+
+var translator = (function() {
+  var yes = "si";
+  var no = "nooo";
+  var maybe = "alomejor";
+
 
   return {
-    manufacture_date: new Date(),
     getColor: function() {
       return color;
     },
