@@ -1,23 +1,32 @@
 console.log(Team JEZ Translator)
 
-var spanish = {yes:si, no:noo, maybe:alomejor};
 
+var userText = document.getElementById('userInput').value
+document.getElementById("translateButton").addEventListener("onClick");
 
-var translator = (function() {
-  var yes = "si";
-  var no = "nooo";
-  var maybe = "alomejor";
-
-
-  return {
-    getColor: function() {
-      return color;
-    },
-    setColor: function(newColor) {
-      color = newColor;
-    },
-    getType: function() {
-      return type;
+function translator (userText) {
+  var var spanish = {
+      merry: "feliz",
+      christmas: "navidad",
+      and: "y",
+      happy: "prospero",
+      new: "nuevo",
+      year: "ano"
+      }
+  var sentence = [];
+  var userText = "";
+  var newArray = userText.split(" ");
+  for (var i = 0; i < newArray.length; i++) {
+    for (var trans in spanish) {
+      if (newArray[i] === trans) {
+        sentence.push(spanish[trans])
+        }
     }
-  };
-})();
+  }
+console.log(sentence.join(' '));
+}
+
+translator(userText)
+
+
+
