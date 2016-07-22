@@ -18,6 +18,6 @@ function translateToEthiopian (userText) {
         }
     }
   }
-console.log(sentence.join(' '));
-}
 
+  return sentence.join(' ');
+}

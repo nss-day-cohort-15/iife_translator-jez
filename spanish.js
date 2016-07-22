@@ -18,6 +18,6 @@ function translateToSpanish (userText) {
         }
     }
   }
-console.log(sentence.join(' '));
+ return sentence.join(' ');
 }
 

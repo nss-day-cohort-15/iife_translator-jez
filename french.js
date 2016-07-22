@@ -2,8 +2,8 @@
 function translateToFrench (userText) {
   console.log(userText);
     var french = {
-      hello: 'bonjour', 
-      merry: 'joyeux', 
+      hello: 'bonjour',
+      merry: 'joyeux',
       christmas:'Noël'
       }
   var sentence = [];
@@ -15,5 +15,6 @@ function translateToFrench (userText) {
         }
     }
   }
-console.log(sentence.join(' '));
+  return sentence.join(' ');
 }
+
