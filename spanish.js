@@ -1,6 +1,5 @@
-
-function translateToSpanish (userText) {
-  console.log(userText);
+var Translator = (function(spanishTranslator) {
+    spanishTranslator.translateToSpanish = function(userText) {
     var spanish = {
       merry: "feliz",
       christmas: "navidad",
@@ -20,4 +19,6 @@ function translateToSpanish (userText) {
   }
  return sentence.join(' ');
 }
+return spanishTranslator;
 
+})(Translator || {});
