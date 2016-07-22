@@ -1,13 +1,5 @@
 
-
-var magicButton =  document.getElementById("translateButton");
-var output = document.getElementById("output");
-
-var userInput = document.getElementById('userInput');
-var spanish = document.getElementById("spanish").checked;
-
-
-function translator (userText) {
+function translateToSpanish (userText) {
   console.log(userText);
     var spanish = {
       merry: "feliz",
@@ -28,13 +20,4 @@ function translator (userText) {
   }
 console.log(sentence.join(' '));
 }
-
-
-magicButton.addEventListener("click", function () {
-  translator(userInput.value)
-});
-
-
-
-
 
