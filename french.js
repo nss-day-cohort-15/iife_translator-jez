@@ -15,6 +15,6 @@ function translateToFrench (userText) {
         }
     }
   }
-console.log(sentence.join(' '));
+  return sentence.join(' ');
 }
 
