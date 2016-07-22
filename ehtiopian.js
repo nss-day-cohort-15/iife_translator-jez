@@ -1,17 +1,23 @@
-var Sedan = (function() {
-  var color = "blue";
-  var type = "sedan";
 
-  return {
-    manufacture_date: new Date(),
-    getColor: function() {
-      return color;
-    },
-    setColor: function(newColor) {
-      color = newColor;
-    },
-    getType: function() {
-      return type;
+function translateToEthiopian (userText) {
+  console.log(userText);
+    var ethiopian = {
+     merry: "melkam",
+     christmas: "gena",
+     and: "ena",
+     happy: "melkam",
+     new: "adis",
+     year: "amet"
+     }
+  var sentence = [];
+  var newArray = userText.split(" ");
+  for (var i = 0; i < newArray.length; i++) {
+    for (var trans in ethiopian) {
+      if (newArray[i] === trans) {
+        sentence.push(ethiopian[trans])
+        }
     }
-  };
-})();
+  }
+console.log(sentence.join(' '));
+}
+

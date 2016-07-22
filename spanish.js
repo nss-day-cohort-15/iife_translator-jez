@@ -1,11 +1,7 @@
-console.log(Team JEZ Translator)
 
-
-var userText = document.getElementById('userInput').value
-document.getElementById("translateButton").addEventListener("onClick");
-
-function translator (userText) {
-  var var spanish = {
+function translateToSpanish (userText) {
+  console.log(userText);
+    var spanish = {
       merry: "feliz",
       christmas: "navidad",
       and: "y",
@@ -14,7 +10,6 @@ function translator (userText) {
       year: "ano"
       }
   var sentence = [];
-  var userText = "";
   var newArray = userText.split(" ");
   for (var i = 0; i < newArray.length; i++) {
     for (var trans in spanish) {
@@ -25,8 +20,4 @@ function translator (userText) {
   }
 console.log(sentence.join(' '));
 }
-
-translator(userText)
-
-
 
